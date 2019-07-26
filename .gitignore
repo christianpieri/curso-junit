@@ -1,0 +1,7 @@
+**/*.class
+**/*.project
+**/*.orig
+**/.classpath
+**/.factorypath
+.settings
+**/*velocity.log*

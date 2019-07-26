@@ -1,1 +1,15 @@
-br/ufsc/bridge/cursojunit/ApplicationStarter.class
+br/ufsc/bridge/cursojunit/validation/UnidadeBasicaSaudeValidator.class
+br/ufsc/bridge/cursojunit/model/form/ProfissionalForm.class
+br/ufsc/bridge/cursojunit/CursoJunitApplication.class
+br/ufsc/bridge/cursojunit/validation/CpfValidator.class
+br/ufsc/bridge/cursojunit/validation/CnsValidator.class
+br/ufsc/bridge/cursojunit/service/ProfissionalQueryCommand.class
+br/ufsc/bridge/cursojunit/model/entity/Prossional.class
+br/ufsc/bridge/cursojunit/service/UnidadeBasicaSaudeService.class
+br/ufsc/bridge/cursojunit/controllers/ProssionalController.class
+br/ufsc/bridge/cursojunit/model/form/UnidadeBasicaSaudeForm.class
+br/ufsc/bridge/cursojunit/service/UnidadeBasicaSaudeQueryCommand.class
+br/ufsc/bridge/cursojunit/controllers/UnidadeBasicaSaudeController.class
+br/ufsc/bridge/cursojunit/model/entity/UnidadeBasicaSaude.class
+br/ufsc/bridge/cursojunit/validation/ProfissionalValidator.class
+br/ufsc/bridge/cursojunit/service/ProfissionalService.class
