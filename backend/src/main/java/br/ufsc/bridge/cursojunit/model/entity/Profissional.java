@@ -19,10 +19,13 @@ import lombok.Setter;
 
 import br.ufsc.bridge.cursojunit.utils.SexoEnum;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Getter
 @Setter
 @Table(name = "TB_PROF")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class Profissional {
 
 	private static final String SEQUENCE_NAME = "SQ_PROF_COSEQPROF";

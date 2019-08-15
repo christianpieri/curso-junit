@@ -11,10 +11,13 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Getter
 @Setter
 @Table(name = "TB_UBS")
+@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 public class UnidadeBasicaSaude {
 
 	private static final String SEQUENCE_NAME = "SQ_UBS_COSEQPROF";
