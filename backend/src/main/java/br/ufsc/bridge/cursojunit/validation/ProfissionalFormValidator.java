@@ -1,8 +1,7 @@
 package br.ufsc.bridge.cursojunit.validation;
 
-import java.time.LocalDate;
-
 import org.apache.commons.lang3.StringUtils;
+import org.joda.time.LocalDate;
 
 import br.ufsc.bridge.cursojunit.model.form.ProfissionalForm;
 import br.ufsc.bridge.cursojunit.utils.ErrosEnum;
@@ -26,13 +25,17 @@ public class ProfissionalFormValidator {
 
 		if (StringUtils.isBlank(form.getNomeProfissional())) {
 			erros.add(ErrosEnum.REQUIRED, "nome profissional");
+		} else if (form.getNomeProfissional().length() > 70) {
+			erros.add(ErrosEnum.MALFORMED, "nome profissional");
 		}
 
 		if (form.getSexoProfissional() == null) {
 			erros.add(ErrosEnum.REQUIRED, "sexo profissional");
 		}
 
-		if (form.getDtNascProfissional() != null && form.getDtNascProfissional().isAfter(LocalDate.now())) {
+		if (form.getDtNascProfissional() == null) {
+			erros.add(ErrosEnum.REQUIRED, "data de nascimento do profissional");
+		} else if (form.getDtNascProfissional().isAfter(new LocalDate())) {
 			erros.add(ErrosEnum.DATA_POSTERIOR_ATUAL, "data de nascimento do profissional");
 		}
 

@@ -1,10 +1,10 @@
 package br.ufsc.bridge.cursojunit.model.form;
 
-import java.time.LocalDate;
-
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import org.joda.time.LocalDate;
 
 import br.ufsc.bridge.cursojunit.utils.SexoEnum;
 
@@ -15,7 +15,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @NoArgsConstructor
 public class ProfissionalForm {
 
-	private Long idProfissional;
 	private String cpfProfissional;
 	private String cnsProfissional;
 	private String nomeProfissional;
