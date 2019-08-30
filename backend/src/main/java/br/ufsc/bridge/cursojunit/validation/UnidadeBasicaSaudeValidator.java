@@ -11,7 +11,7 @@ public class UnidadeBasicaSaudeValidator {
 	public static void validate(UnidadeBasicaSaudeForm form, FormError erros) {
 		if (StringUtils.isBlank(form.getNomeUbs())) {
 			erros.add(ErrosEnum.REQUIRED, "nome ubs");
-		} else if (form.getNomeUbs().length() >= 70) {
+		} else if (form.getNomeUbs().length() > 70) {
 			erros.add(ErrosEnum.MALFORMED, "nome ubs");
 		}
 	}
