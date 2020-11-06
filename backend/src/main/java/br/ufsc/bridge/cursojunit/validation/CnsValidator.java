@@ -3,6 +3,11 @@ package br.ufsc.bridge.cursojunit.validation;
 public class CnsValidator {
 
 	public static boolean isValid(String cns) {
+
+		if (cns == null) {
+			return false;
+		}
+
 		if (cns.matches("[1-2]\\d{10}00[0-1]\\d") || cns.matches("[7-9]\\d{14}")) {
 			return somaPonderada(cns) % 11 == 0;
 		}

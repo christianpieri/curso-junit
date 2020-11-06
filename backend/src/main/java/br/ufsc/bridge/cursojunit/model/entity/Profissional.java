@@ -1,7 +1,5 @@
 package br.ufsc.bridge.cursojunit.model.entity;
 
-import java.time.LocalDate;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -16,6 +14,8 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.Setter;
+
+import org.joda.time.LocalDate;
 
 import br.ufsc.bridge.cursojunit.utils.SexoEnum;
 
@@ -55,7 +55,7 @@ public class Profissional {
 	@Column(name = "NU_TELEFONE")
 	private String telefone;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "CO_SEQ_UBS")
 	private UnidadeBasicaSaude unidadeBasicaSaude;
 }
